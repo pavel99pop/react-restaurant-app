@@ -16,16 +16,16 @@ const HomePage = () => {
       <div className="home-search">
         <input
           type="text"
-          placeholder="Type a dish name..."
+          placeholder="Looking for something specific?"
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
         />
         <button onClick={fetchDishesHandler}>Search</button>
       </div>
-      <div className="home-dishes">
+      <div className="home-dishes-grid">
         {dishes ? (
           dishes.map((dish) => (
-            <div className="home-dishes-grid" key={dish.idMeal}>
+            <div className="home-dish" key={dish.idMeal}>
               <img src={dish.strMealThumb} alt="#" />
               <h4>{dish.strMeal}</h4>
             </div>

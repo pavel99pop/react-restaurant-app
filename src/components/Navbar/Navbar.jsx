@@ -13,15 +13,19 @@ const Navbar = () => {
       <div className="navbar-links">
         <ul>
           <Link to="/">
+            {" "}
             <li>Home</li>
           </Link>
           <Link to="/special">
+            {" "}
             <li>Today's Special</li>
           </Link>
           <Link to="/categories">
+            {" "}
             <li>Categories</li>
           </Link>
           <Link to="/random">
+            {" "}
             <li>Random Dish</li>
           </Link>
         </ul>

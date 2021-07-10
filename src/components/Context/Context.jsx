@@ -17,8 +17,35 @@ export const AppContext = ({ children }) => {
       });
   }, []);
 
+  const fetchCategories = useCallback(() => {
+    axios
+      .get(`https://www.themealdb.com/api/json/v1/1/categories.php`)
+      .then((res) => {
+        console.log(res.data.categories);
+        setCategories(res.data.categories);
+      });
+  }, []);
+
+  const fetchRandomDish = useCallback(() => {
+    axios
+      .get(`https://www.themealdb.com/api/json/v1/1/random.php`)
+      .then((res) => {
+        console.log(res.data.meals);
+        setRandomDish(res.data.meals);
+      });
+  }, []);
+
   return (
-    <myContext.Provider value={{ fetchHomePageDishes, dishes }}>
+    <myContext.Provider
+      value={{
+        fetchHomePageDishes,
+        dishes,
+        fetchCategories,
+        categories,
+        fetchRandomDish,
+        randomDish,
+      }}
+    >
       {children}
     </myContext.Provider>
   );

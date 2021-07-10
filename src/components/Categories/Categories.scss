@@ -1,0 +1,42 @@
+.categories {
+  min-height: 85vh;
+  height: auto;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  //   margin: 20px 0;
+
+  &-grid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+    margin: 20px 0;
+    flex-wrap: wrap;
+  }
+
+  .category {
+    transition: all 0.4s ease;
+    margin: 20px;
+    padding: 10px;
+    border: 2px solid #f9c22e;
+    border-radius: 10px;
+    cursor: pointer;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+
+    h4 {
+      background: #f3d9dc;
+      font-size: 20px;
+      text-align: center;
+    }
+  }
+
+  img {
+    width: 170px;
+    margin: 10px;
+  }
+}

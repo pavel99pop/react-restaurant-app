@@ -15,10 +15,10 @@ function App() {
       <Router>
         <Navbar />
         <Switch>
-          <Route path="/" component={HomePage} />
-          <Route path="/special" component={SpecialDish} />
-          <Route path="/categories" component={Categories} />
-          <Route path="/random" component={RandomDish} />
+          <Route exact path="/" component={HomePage} />
+          <Route exact path="/special" component={SpecialDish} />
+          <Route exact path="/categories" component={Categories} />
+          <Route exact path="/random" component={RandomDish} />
         </Switch>
         <Footer />
       </Router>

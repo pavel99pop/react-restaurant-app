@@ -1,12 +1,15 @@
 .navbar {
   width: 100%;
   height: 10vh;
+  position: sticky;
   background: #1c2826;
   color: #ee4266;
   display: flex;
   align-items: center;
   justify-content: space-between;
   border-bottom: 4px solid #ee4266;
+  top: 0;
+  z-index: 1;
 
   &-heading {
     h1 {
