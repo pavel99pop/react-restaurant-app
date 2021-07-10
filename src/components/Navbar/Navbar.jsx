@@ -26,7 +26,7 @@ const Navbar = () => {
           </Link>
           <Link to="/random">
             {" "}
-            <li>Random Dish</li>
+            <li>Random Recipe</li>
           </Link>
         </ul>
       </div>
